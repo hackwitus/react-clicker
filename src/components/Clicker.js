@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Value from './Value';
 
 const Clicker = () => {
   const [value, setValue] = useState(0);
@@ -14,7 +15,7 @@ const Clicker = () => {
   return (
     <div>
       <button onClick={decrement}>-</button>
-      {value}
+      <Value value={value} />
       <button onClick={increment}>+</button>
     </div>
   );
