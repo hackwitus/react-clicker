@@ -1,5 +1,6 @@
 import React from 'react';
+import { Button } from 'semantic-ui-react';
 
 export default props => {
-  return <span>{props.value}</span>;
+  return <Button.Or text={props.value} />;
 };

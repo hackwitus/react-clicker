@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button, Container, Header } from 'semantic-ui-react';
 import Value from './Value';
 
 const Clicker = () => {
@@ -13,11 +14,16 @@ const Clicker = () => {
   };
 
   return (
-    <div>
-      <button onClick={decrement}>-</button>
-      <Value value={value} />
-      <button onClick={increment}>+</button>
-    </div>
+    <Container style={{ textAlign: 'center', marginTop: '3rem' }}>
+      <Header>React Clicker</Header>
+      <Button.Group>
+        <Button onClick={decrement}>-</Button>
+        <Value value={value} />
+        <Button positive onClick={increment}>
+          +
+        </Button>
+      </Button.Group>
+    </Container>
   );
 };
 
