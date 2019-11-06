@@ -3,11 +3,19 @@ import React, { useState } from 'react';
 const Clicker = () => {
   const [value, setValue] = useState(0);
 
+  const increment = () => {
+    setValue(value + 1);
+  };
+
+  const decrement = () => {
+    setValue(value - 1);
+  };
+
   return (
     <div>
-      <button>-</button>
+      <button onClick={decrement}>-</button>
       {value}
-      <button>+</button>
+      <button onClick={increment}>+</button>
     </div>
   );
 };
